@@ -32,29 +32,24 @@
     const firstName = document.getElementById("first");
     const lastName = document.getElementById("last");
     const full = document.querySelector('p');
+function nameCreator() {
+    firstName.addEventListener("change", nameCreator)
+    let first = firstName.value;
+    let last = lastName.value;
+    let fullName = `${first} ${last}`;
+    if (fullName.length > 1) {
+        full.classList.remove("hidden");
+    } else {
+        full.classList.add("hidden");
+    }
+    full.textContent = ` Hello ${fullName}`;
+}
+    lastName.addEventListener("change", nameCreator)
+    let first = firstName.value;
+    let last = lastName.value;
+    let fullName = `Hello ${first} ${last}`;
+    full.textContent = fullName;
 
-    firstName.addEventListener("change", function(e){
-        let first = firstName.value;
-        let last = lastName.value;
-        let fullName = `${first} ${last}`;
-        if (fullName>1){
-            full.classList.remove("hidden");
-        } else{
-            full.classList.add("hidden");
-        }
-        full.textContent = ` Hello ${fullName}`;
-    })
-    lastName.addEventListener("change", function(e){
-        let first = firstName.value;
-        let last = lastName.value;
-        let fullName = `${first} ${last}`;
-        if (fullName>1){
-            full.classList.remove("hidden");
-            } else{
-            full.classList.add("hidden");
-        }
-        full.textContent = ` Hello ${fullName}`;
-    });
 
     const clear = document.querySelector('[name = "clear"]');
     clear.addEventListener("click", function(e){
