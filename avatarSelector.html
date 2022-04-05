@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Choose character</title>
+    <link rel = "stylesheet" href = "style.css">
+</head>
+<body>
+
+<div class = "container">
+    <div class = "content">
+        <h3>Choose your character</h3>
+
+        <img src = "https://www.seekpng.com/png/detail/45-458854_stick-figure-png-stick-figure-png-transparent.png" width = 300 height = 300 id = "img">
+
+        <div class = "row">
+            <button id = "img1" >Character 1</button>
+            <button id = "img2">Character 2</button>
+            <button id = "img3">Character 3</button>
+        </div>
+
+        <div class = "row">
+            <button id = "img4">Character 4</button>
+            <button id = "img5">Character 5</button>
+            <button id = "img6">Character 6</button>
+        </div>
+
+        <button id = "clear">CLEAR</button>
+    </div>
+</div>
+
+<script>
+    const content = document.querySelector(".content");
+    const picture = document.getElementById("img")
+    const img1 = document.getElementById("img1");
+    const img2 = document.getElementById("img2");
+    const img3 = document.getElementById("img3");
+    const img4 = document.getElementById("img4");
+    const img5 = document.getElementById("img5");
+    const img6 = document.getElementById("img6");
+
+    img1.addEventListener("click", function(e){
+        picture.src = "https://lumiere-a.akamaihd.net/v1/images/General-Grievous_c9df9cb5.jpeg?region=0%2C0%2C1200%2C675&width=960"
+    })
+
+    img2.addEventListener("click", function(e){
+        picture.src = "https://upload.wikimedia.org/wikipedia/en/c/c5/Obiwan1.jpg"
+    })
+
+    img3.addEventListener("click", function(e){
+        picture.src = "https://www.liveabout.com/thmb/6siWz1QL5Du-Gv9Uq6TkkKLKE30=/993x993/smart/filters:no_upscale()/EP2-IA-32565_R_8x10-56a83bdc5f9b58b7d0f1b389.jpg"
+    })
+
+    img4.addEventListener("click", function(e){
+        picture.src = "https://lumiere-a.akamaihd.net/v1/images/luke-skywalker-main_fb34a1ff.jpeg?region=131%2C0%2C951%2C536"
+    })
+
+    img5.addEventListener("click", function(e){
+        picture.src = "https://preview.redd.it/x8khygd3g1541.png?width=400&format=png&auto=webp&s=ce8ca70ab7ba09c96db791b4884b1507a43827e8"
+    })
+
+    img6.addEventListener("click", function(e){
+        picture.src = "https://lumiere-a.akamaihd.net/v1/images/boba-fett-main_a8fade4d.jpeg?region=205%2C34%2C1064%2C598&width=960"
+    })
+
+    clear.addEventListener("click", function(e){
+        picture.src = "https://www.seekpng.com/png/detail/45-458854_stick-figure-png-stick-figure-png-transparent.png"
+    })
+</script>
+</body>
+</html>
