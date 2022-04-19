@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel = "stylesheet" href = "style.css">
+</head>
+<body>
+<div class = "container">
+    <div class = "content">
+        <h3>What is this?</h3>
+        <h4>I dont want this</h4>
+    </div>
+</div>
+
+<script>
+    const content = document.querySelector(".content");
+    content.innerHTML = '<h1 class="lose">I love SM64</h1> <h4>Better Call Saul!</h4>';
+
+    const doom = document.createElement("h1");
+    doom.innerHTML = "I love Doom";
+    content.appendChild(doom);
+
+    const bb = document.createElement("h1");
+    bb.innerHTML = "I love Breaking Bad";
+    content.appendChild(bb);
+
+    const bc = document.createElement("h1");
+    bc.innerHTML = "I love BatChest";
+    content.appendChild(bc);
+
+    const w = document.createElement("h1");
+    w.innerHTML = "I love 4Weird";
+    content.appendChild(w);
+
+    const food = document.createElement("h1");
+    food.innerHTML = "I love pizza";
+    content.insertAdjacentElement("beforeend", food);
+
+    const unwantedElement = document.querySelector("h4");
+    unwantedElement.remove();
+
+    const unwantedElement2 = document.querySelector(".lose");
+    unwantedElement2.remove();
+</script>
+</body>
+</html>
