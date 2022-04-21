@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel = "stylesheet" href = "style.css">
+</head>
+<body>
+
+<div class = "container">
+    <div class = "content">
+
+        <div>
+            <div class = "row">
+            <label for = "input">Item</label>
+            <input type = "text" id = "input">
+            </div>
+        </div>
+
+        <button name  = "add">Add item</button>
+
+        <ul class = "hidden"></ul>
+    </div>
+</div>
+
+<script>
+
+    const myList = document.querySelector("ul")
+    const add = document.querySelector(".add")
+    const input = document.querySelector(".input")
+
+    function addItem(){
+        let newElement = document.createElement("li");
+
+        newElement.addEventListener("click", function(e){
+            let list = input.value
+            
+        });
+
+        myList.appendChild(newElement);
+    }
+
+    add.addEventListener("click", addItem)
+</script>
+</body>
+</html>

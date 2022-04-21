@@ -37,10 +37,7 @@ const hello = document.querySelector('[name = "hello"]');
         let fullName = `${first} ${last}`;
         const c = document.createElement("p");
         c.innerHTML = `Hello ${fullName}`
-        content.appendChild(c)
-        if (content.appendChild(c)) {
-            c.insertAdjacentElement("beforebegin", c)
-        }
+        content.appendChild(c);
     })
 </script>
 </body>

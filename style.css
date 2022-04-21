@@ -71,9 +71,20 @@ section header{
     padding: 20px;
     border-radius: 12px;
     width: 500px;
+    border: 15px blue;
 }
 .center{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.line {
+    margin: auto;
+    padding: 10px;
+}
+
+.border{
+    border: 15px;
+    border-color: aqua;
 }
