@@ -23,28 +23,25 @@
 </div>
 </div>
 
-<!--<p class = "hidden"></p>-->
-
 <script>
     const content = document.querySelector(".content");
-
-    // const hidden = document.querySelector(".hidden")
 
     const firstName = document.getElementById("first");
     const lastName = document.getElementById("last");
 
-    let first = firstName.value;
-    let last = lastName.value;
-    let fullName = `${first} ${last}`;
-
 
 const hello = document.querySelector('[name = "hello"]');
     hello.addEventListener("click", function(e){
-        const c = document.querySelector("p");
-        c.innerHTML = `${fullName}`
-        content.insertAdjacentElement("beforeend", c);
+        let first = firstName.value;
+        let last = lastName.value;
+        let fullName = `${first} ${last}`;
+        const c = document.createElement("p");
+        c.innerHTML = `Hello ${fullName}`
+        content.appendChild(c)
+        if (content.appendChild(c)) {
+            c.insertAdjacentElement("beforebegin", c)
+        }
     })
-
 </script>
 </body>
 </html>
