@@ -24,23 +24,29 @@
 </div>
 
 <script>
+    const content = document.querySelector(".content");
 
     const myList = document.querySelector("ul")
-    const add = document.querySelector(".add")
     const input = document.querySelector(".input")
+    const addButton = document.querySelector(".add")
 
-    function addItem(){
-        let newElement = document.createElement("li");
 
-        newElement.addEventListener("click", function(e){
-            let list = input.value
-            
-        });
+         function addItem(){
+        let item = input.value
+        const c = document.querySelector("li")
+         let newElement = document.createElement("li");
 
-        myList.appendChild(newElement);
-    }
+        c.innerHTML = `${item}`
 
-    add.addEventListener("click", addItem)
+         newElement.addEventListener("click", function(e){
+             newElement.innerHTML = ""
+         });
+
+         myList.appendChild(newElement);
+        myList.appendChild(c);
+         }
+    addButton.addEventListener("click", addItem)
+
 </script>
 </body>
 </html>
