@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Timers</title>
+    <link rel = "stylesheet" href = "style.css">
+
+    <style>
+        .red{
+            background-color: red;
+        }
+
+        .blue{
+            color: blue;
+        }
+
+        .green{
+            color: green;
+        }
+
+        .purple{
+            color: purple;
+        }
+
+        .yellow{
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+<div class = "container">
+    <div class = "content">
+        <button id = "trigger">Click me!</button>
+
+        <button id = "interval">Repeat</button>
+
+        <button id = "cancel">Cancel</button>
+
+        <button id = "remove">Remove</button>
+
+        <div>
+            <button id = change>Change</button>
+        </div>
+
+        <div class = "red"></div>
+        <div class = "green"></div>
+        <div class = "blue"></div>
+        <div class = "purple"></div>
+        <div class = "yellow"></div>
+
+    </div>
+</div>
+
+<script>
+    const myButton =  document.getElementById("trigger");
+    const repeatButton = document.getElementById("interval");
+    const cancelButton = document.getElementById("cancel");
+    const removeButton = document.getElementById("remove");
+    const changeButton = document.getElementById("change")
+    let interval;
+
+    let colors = ["red", "green", "blue", "purple", "yellow"];
+    let shuffle = Math.floor(Math.random() * colors.length);
+
+    myButton.addEventListener("click", function(e){
+        setTimeout(function(){
+            console.log("I was clicked on one second ago");
+        }, 1000);
+    })
+
+    repeatButton.addEventListener("click", function(e){
+        if (!interval) {
+            interval = setInterval(function () {
+                console.log("I happen every second");
+            }, .1)
+        }
+    })
+
+
+    cancelButton.addEventListener("click", function(e){
+        if (interval){
+            clearInterval(interval);
+            interval = null;
+        }
+    })
+
+    removeButton.addEventListener("click", function(e){
+        setTimeout(function(){
+            remove.remove("")
+        }, 3000)
+    });
+
+    changeButton.addEventListener("click", function(e){
+        setTimeout(function(){
+            changeButton.classList.add(colors[shuffle])
+        }, 5000)
+    })
+
+    console.log("Just happens");
+</script>
+</body>
+</html>
