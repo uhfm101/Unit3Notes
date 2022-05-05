@@ -3,23 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel = "stylesheet" href = "style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class = "container">
-    <div class = "content">
+<div class="container">
+    <div class="content">
 
         <div>
-            <div class = "row">
-            <label for = "input">Item</label>
-            <input type = "text" id = "input">
+            <div class="row">
+                <label for="input">Item</label>
+                <input type="text" id="input">
             </div>
         </div>
 
-        <button name  = "add">Add item</button>
+        <button name="add">Add item</button>
 
-        <ul class = "hidden"></ul>
+        <ul class="hidden"></ul>
     </div>
 </div>
 
@@ -31,20 +31,27 @@
     const addButton = document.querySelector(".add")
 
 
-         function addItem(){
+    function addItem() {
         let item = input.value
         const c = document.querySelector("li")
-         let newElement = document.createElement("li");
+        let newElement = document.createElement("li");
+
+        newElement.addEventListener("click", function (e) {
+            let list = input.value
+
+        });
+
 
         c.innerHTML = `${item}`
 
-         newElement.addEventListener("click", function(e){
-             newElement.innerHTML = ""
-         });
+        newElement.addEventListener("click", function (e) {
+            newElement.innerHTML = ""
+        });
 
-         myList.appendChild(newElement);
+        myList.appendChild(newElement);
         myList.appendChild(c);
-         }
+    }
+
     addButton.addEventListener("click", addItem)
 
 </script>

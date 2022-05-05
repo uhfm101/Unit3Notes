@@ -11,19 +11,19 @@
         }
 
         .blue{
-            color: blue;
+            background-color: blue;
         }
 
         .green{
-            color: green;
+            background-color: green;
         }
 
         .purple{
-            color: purple;
+            background-color: purple;
         }
 
         .yellow{
-            color: yellow;
+            background-color: yellow;
         }
     </style>
 </head>
@@ -94,6 +94,7 @@
         setTimeout(function(){
             changeButton.classList.add(colors[shuffle])
         }, 5000)
+        changeButton.classList.remove(colors[shuffle])
     })
 
     console.log("Just happens");
